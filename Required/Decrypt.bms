@@ -1,0 +1,5 @@
+Set AES_KEY binary "=d6nw6YY6E#tI=6li6pI5CVaBC@fy%vR"
+Encryption AES AES_KEY
+Get NAME filename
+Get SIZE asize
+Log NAME 0 SIZE

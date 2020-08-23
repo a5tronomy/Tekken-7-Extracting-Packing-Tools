@@ -1,0 +1,64 @@
+# TEKKEN 7\TekkenGame\Content\Binary\tkdata.bin
+# Script for QuickBMS http://quickbms.aluigi.org
+#
+# Script v0.2.1
+# Not thoroughly tested, issues are likely.
+# Tested with Tekken7 29th July patch.
+# Added footer extraction for more efficient (seperate) patching.
+
+set AES_KEY binary "epsNJf#ut&v3fVrndlYkp&Sq@5Ry?BHA"
+
+idstring "_TEKKEN7CSFILES_"
+
+#Get the footer (for patching)
+get SIZE asize
+math SIZE - 0x80
+log "TKFOOTER" SIZE 0x80
+
+# Find the BNBinLst, and read it to MEMORY_FILE.
+# This file contains info about rest of the files.
+goto -0x68
+get BINLIST_OFFSET longlong
+get BINLIST_SIZE longlong
+
+encryption aes AES_KEY
+clog MEMORY_FILE BINLIST_OFFSET BINLIST_SIZE 10000000
+encryption aes AES_KEY
+clog "BNBinLst" BINLIST_OFFSET BINLIST_SIZE 10000000
+
+
+# Read the BNBinLst.
+idstring MEMORY_FILE "tsLniBNB"
+get NUM_FILES longlong MEMORY_FILE
+get FILE_INFO_OFFSET longlong MEMORY_FILE
+get FILE_NAME_OFFSET longlong MEMORY_FILE
+
+# Dump each file.
+for i = 0 < NUM_FILES
+    goto FILE_NAME_OFFSET MEMORY_FILE
+    get FILE_NAME string MEMORY_FILE
+    savepos FILE_NAME_OFFSET MEMORY_FILE
+
+    goto FILE_INFO_OFFSET MEMORY_FILE
+    get FILE_ID? longlong MEMORY_FILE
+    get FLAGS? longlong MEMORY_FILE
+    get NO_IDEA? longlong  MEMORY_FILE
+    get FILE_OFFSET longlong MEMORY_FILE
+    math FILE_OFFSET + 0x10
+    get FILE_SIZE_COMPRESSED longlong MEMORY_FILE
+    get FILE_SIZE_UNCOMPRESSED longlong MEMORY_FILE
+    get PAD1 longlong MEMORY_FILE
+    get PAD2 longlong MEMORY_FILE
+    savepos FILE_INFO_OFFSET MEMORY_FILE
+
+    set IS_COMPRESSED longlong 0x01
+    math IS_COMPRESSED & FLAGS?
+    if IS_COMPRESSED == 1
+        comtype zlib
+    else
+        comtype copy
+    endif
+
+    encryption aes AES_KEY
+    clog FILE_NAME FILE_OFFSET FILE_SIZE_COMPRESSED FILE_SIZE_UNCOMPRESSED
+next i
