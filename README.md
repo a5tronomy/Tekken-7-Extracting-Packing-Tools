@@ -1,1 +1,1 @@
-# Tekken-7-Modding-Tools
+# Tekken 7 Modding Tools
