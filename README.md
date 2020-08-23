@@ -37,6 +37,9 @@ Drag and drop a '.pak' file into 'Unpak.bat' in order to unpack it - encrypted f
   - <a href="https://www.fluffyquack.com/">FluffyQuack</a> for creating UnrealPak
   - <a href="https://twitter.com/gneiss64">Gneiss</a> for creating the cryptiontools
   - <a href="https://twitter.com/MemeMongerBPM">Labryz</a> for creating the 'tkdata'-script
+  
+# Download
+<a href="https://github.com/a5tronomy/Tekken-7-Modding-Tools/archive/master.zip">Download</a>
 
 # Questions?
 Join our Discord for help: <br>
