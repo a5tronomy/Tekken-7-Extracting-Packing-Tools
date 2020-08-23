@@ -1,5 +1,5 @@
 # <a href="https://github.com/a5tronomy/Tekken-7-Modding-Tools/archive/master.zip">Download</a>
-# Tekken 7 Extracting and Packing Tools
+# Tekken 7 Extracting and Packing tools
 
 This is a set of scripts and batch files that was created to simplify Tekken 7's modding workflow. <br>
 
