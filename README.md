@@ -11,7 +11,7 @@ This is a set of scripts and batch files that was created to simplify Tekken 7's
 In order to use the batch files, you have to generate a config file. Said file includes the paths to the '.pak' files, <br>
 'tkdata.bin' as well as the '~mods' folder. To generate it, launch "Generate Config.bat". <br>
 
-<img src="https://raw.githubusercontent.com/a5tronomy/Tekken-7-Modding-Tutorials/master/Basics/GenerateConfig.jpg">
+<img src="https://i.imgur.com/uqP5fvB.jpg">
 
 It will prompt you to paste the path to your local Tekken 7 installation as seen in the examples above. <br>
 The console will echo "The configuration file has been generated." when the config file was succesfully generated. <br>
