@@ -1,3 +1,4 @@
+# <a href="https://github.com/a5tronomy/Tekken-7-Modding-Tools/archive/master.zip">Download</a>
 # Tekken 7 Modding Tools
 
 This is a set of scripts and batch files that was created to simplify Tekken 7's modding workflow. <br>
@@ -37,8 +38,7 @@ Drag and drop a '.pak' file into 'Unpak.bat' in order to unpack it - encrypted f
   - <a href="https://www.fluffyquack.com/">FluffyQuack</a> for creating UnrealPak
   - <a href="https://twitter.com/gneiss64">Gneiss</a> for creating the cryptiontools
   - <a href="https://twitter.com/MemeMongerBPM">Labryz</a> for creating the 'tkdata'-script
-  
-# <a href="https://github.com/a5tronomy/Tekken-7-Modding-Tools/archive/master.zip">Download</a>
+
 
 # Questions?
 Join our Discord for help: <br>
