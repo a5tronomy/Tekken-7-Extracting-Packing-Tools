@@ -7,7 +7,7 @@ This is a set of scripts and batch files that was created to simplify Tekken 7's
   - Automatic decryption and encryption
   - Simplified extraction and packing
   - Includes exclusive PS4 files
-  - Automically adds _P to the end of the '.pak'-name
+  - Automatically adds _P to the end of the '.pak'-name
 
 # Generate config file
 In order to use the batch files, you have to generate a config file. Said file includes the paths to the '.pak' files, <br>
