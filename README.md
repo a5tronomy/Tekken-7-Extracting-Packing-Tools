@@ -37,6 +37,7 @@ Drag and drop a '.pak' file into 'Unpak.bat' in order to unpack it - encrypted f
 # Credits
   - <a href="https://aluigi.altervista.org/">Luigi Auriemma</a> for creating QuickBMS
   - <a href="https://www.fluffyquack.com/">FluffyQuack</a> for creating UnrealPak
+  - <a href="https://github.com/panzi">Panzi</a> for creating U4Pak
   - <a href="https://twitter.com/gneiss64">Gneiss</a> for creating the cryptionscripts
   - <a href="https://twitter.com/MemeMongerBPM">Labryz</a> for creating the 'tkdata'-script
 
